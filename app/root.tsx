@@ -22,6 +22,23 @@ import favicon from '../public/favicon.svg';
 import resetStyles from './styles/reset.css';
 import appStyles from './styles/app.css';
 import {Layout} from '~/components/Layout';
+import {storyblokInit, apiPlugin} from '@storyblok/react';
+import {
+  FallbackComponent,
+  storyblokComponents,
+} from '~/components/storyblokComponents';
+
+storyblokInit({
+  accessToken: 'rRxxTGrr4U5VpgxNtcPmrQtt',
+  use: [apiPlugin],
+  components: storyblokComponents,
+  apiOptions: {
+    region: 'eu',
+  },
+  bridge: true,
+  enableFallbackComponent: true,
+  customFallbackComponent: FallbackComponent,
+});
 
 /**
  * This is important to avoid re-fetching root queries on sub-navigations

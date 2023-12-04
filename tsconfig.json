@@ -3,7 +3,7 @@
     "./**/*.d.ts",
     "./**/*.ts",
     "./**/*.tsx"
-  ],
+, "app/helper.js", "app/routes/$.jsx"  ],
   "compilerOptions": {
     "lib": [
       "DOM",
